@@ -6,7 +6,7 @@ const DELAY_MAX = 10;
 const DELAY_MIN = 2;
 
 const addSnow = () => {
-  const [small, middle, big] = [10, 14, 20];
+  const [small, middle, big] = [16, 24, 30];
   const snowsize = [small, small, small, small, small, middle, middle, middle, big, big];
   const snow = document.createElement('span');
   const size = snowsize[Math.random() * snowsize.length];
@@ -19,7 +19,7 @@ const addSnow = () => {
   snow.style.animationDuration = `${Math.floor(Math.random() * (DELAY_MAX - DELAY_MIN) + DELAY_MIN)}s`;
   wrapper.appendChild(snow);
 
-  if (count < 300) {
+  if (count < 30) {
     ++count;
     window.requestAnimationFrame(addSnow);
   }
