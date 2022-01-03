@@ -1,12 +1,12 @@
 const wrapper = document.querySelector(".wrapper");
 let count = 0;
-const ANI_MAX_TIME = 40;
-const ANI_MIN_TIME = 30;
-const DELAY_MAX = 10;
-const DELAY_MIN = 2;
+const ANI_MAX_TIME = 60;
+const ANI_MIN_TIME = 40;
+const DELAY_MAX = 15;
+const DELAY_MIN = 5;
 
 const addSnow = () => {
-  const [small, middle, big] = [30, 40, 50];
+  const [small, middle, big] = [12, 16, 20];
   const snowsize = [
     small,
     small,
@@ -20,11 +20,13 @@ const addSnow = () => {
     big,
   ];
   const snow = document.createElement("span");
-  const size = snowsize[Math.random() * snowsize.length];
+  const size = snowsize[Math.floor(Math.random() * snowsize.length)];
   snow.classList.add("snow");
   snow.style.width = `${size}px`;
   snow.style.height = `${size}px`;
+  snow.style.filter = `blur(${size / 4}px)`;
   snow.style.borderRadius = `${size / 2}px`;
+
   snow.style.left = `${Math.floor(Math.random() * (window.innerWidth + 1))}px`;
   snow.style.animationDuration = `${Math.floor(
     Math.random() * (ANI_MAX_TIME - ANI_MIN_TIME) + ANI_MIN_TIME
