@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(1, 18, 27);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  color:whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  z-index: 10;
+  box-shadow: 0 0 1px rgb(30, 99, 73);
+}
+
+.card h1 {
+  font-size: 3rem;
+  font-family: "Vujahday Script";
+  color:#e46f01;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  background-color: rgba(2, 41, 47, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background: linear-gradient(
+    -45deg,
+    #0c6333 25%, 
+    #d61333 25%,
+    #d61333 50%,
+    #0c6333 50%, 
+    #0c6333 75%,
+    #d61333 75%,
+    #d61333 100%
+  );
+  background-size: 85px 85px;
+}
+.snow {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  filter: blur(1px);
+  animation: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes snowfall {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 90%;
+    opacity: 0;
+  }
+}
