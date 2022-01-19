@@ -15,12 +15,12 @@
 }
 
 .card {
-  color:whitesmoke;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: 200px;
-  padding: 20px;
+  width: 240px;
+  height: 180px;
+  padding: 12px;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
@@ -37,7 +37,7 @@
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-align: center;
 }
 
@@ -63,10 +63,10 @@ p {
   height: 15%;
   background: linear-gradient(
     -45deg,
-    #0c6333 25%, 
+    #0c6333 25%,
     #d61333 25%,
     #d61333 50%,
-    #0c6333 50%, 
+    #0c6333 50%,
     #0c6333 75%,
     #d61333 75%,
     #d61333 100%
@@ -76,11 +76,7 @@ p {
 .snow {
   position: absolute;
   top: -10px;
-  width: 2px;
-  height: 2px;
-  border-radius: 2px;
   background-color: white;
-  filter: blur(1px);
   animation: snowfall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
